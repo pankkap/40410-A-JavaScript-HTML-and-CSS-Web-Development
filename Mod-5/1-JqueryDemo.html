@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Example</title>
+
+    <!-- Downloadable Jquery -->
+    <script src="../JS/jquery-3.6.0.js"></script>
+
+    <!-- JQuery in CDN Version -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Selectors
+      // let para = document.getElementById("para1");
+      // let heading = document.querySelector("h1");
+      // let btn = document.getElementsByClassName("btn")[0];
+
+      // btn.onclick = function () {
+      //   heading.innerText = "Heading Updated";
+      //   para.style.color = "red";
+      //   para.style.fontFamily = "arial";
+      // };
+
+      $().ready(function () {
+        $(".btn").click(function () {
+          $("h1").text("Heading Updated");
+          $("#para1").css({ color: "red", fontFamily: "arial" });
+          $("h1").toggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>This is Heading</h1>
+    <p id="para1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi harum quam
+      repellat dolor ratione soluta facere, dolores eligendi tenetur cupiditate
+      consectetur minima aliquam libero quo unde quisquam blanditiis voluptates
+      voluptatum officiis accusamus. Reiciendis beatae eum repudiandae
+      reprehenderit perspiciatis obcaecati mollitia? Distinctio natus quaerat
+      harum reiciendis fugit adipisci soluta sit consequuntur.
+    </p>
+    <button class="btn">Click Me</button>
+  </body>
+</html>

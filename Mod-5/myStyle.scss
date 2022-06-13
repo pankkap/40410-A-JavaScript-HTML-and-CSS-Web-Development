@@ -1,0 +1,52 @@
+// SAAS is a CSS Preprocessor
+// Syntactically Awesome Style Sheet
+// Extension is .sccs
+// Super CSS (Advancment of CSS)
+// Sassy CSS
+// Transpiler which a compiler that convert Scss into css. 
+// store css code inside a varible
+// Inheritance in css
+
+$col: #5450A5;
+$ft: arial;
+$fs: 24px;
+
+body
+{
+     display: flex;
+}
+.container
+{
+    background-color: $col;
+    font-family: $ft;
+    width: 600px;
+    height: 400px;    
+
+   
+}
+h1
+{
+    font-size: $fs;
+}
+
+@mixin boxContainer($mycol) {
+    width: 100px;
+    height: 100px;
+    border: 2px solid $mycol;
+}
+
+.box1
+{
+    @include boxContainer(red);
+}
+.box2
+{
+    @include boxContainer(blue);
+    border-radius: 50%;
+}
+.box3
+{
+    @include boxContainer(green);
+    height:150px;
+    border-radius: 50%;
+}

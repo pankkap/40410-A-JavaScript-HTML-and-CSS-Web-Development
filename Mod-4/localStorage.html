@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage | SessioStorage</title>
+  </head>
+  <body>
+    <h2>Local Storage | Session Storage Example</h2>
+
+    <pre>
+    Enter the data you want to store in Local Storage  
+    Name:    
+    <input type="text" id="textBox">
+    Email: 
+    <input type="text" id="textBox1">
+
+    <button>Add Data</button>  <button id="btn-2">Remove Data</button>
+
+    <p id="para">   Recieving Data from Local Storage  </p>
+
+    </pre>
+
+    <script>
+      let textBox = document.getElementById("textBox");
+      let textBox1 = document.getElementById("textBox1");
+      let btn = document.querySelector("button");
+      let para = document.querySelector("#para");
+      let btn2 = document.querySelector("#btn-2");
+
+      var myObj = {
+        name: "",
+        email: "",
+      };
+
+      btn.onclick = function () {
+        myObj.name = textBox.value;
+        myObj.email = textBox1.value;
+        // console.log(data);
+        sessionStorage.setItem("info", JSON.stringify(myObj));
+        // sessionStorage.setItem("info", myObj);
+
+        // Getting data from Local Storage
+        let data1 = sessionStorage.getItem("info");
+        data1 = JSON.parse(data1);
+        para.textContent = data1.name;
+      };
+
+      btn2.onclick = function () {
+        sessionStorage.removeItem("info");
+        para.textContent = "No Data inside Local Storage";
+      };
+    </script>
+  </body>
+</html>

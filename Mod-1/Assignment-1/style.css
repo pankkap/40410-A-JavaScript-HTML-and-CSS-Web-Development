@@ -1,0 +1,54 @@
+html
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px 0;
+}
+
+figure {
+  /* border: 2px solid green; */
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  flex-direction: column;
+}
+figcaption {
+  text-align: center;
+  font-family: arial;
+}
+h3
+{
+ text-align: center;   
+}
+
+section
+{
+    width: 600px;
+    margin: auto;
+    border: 2px solid red;
+
+}
+ul li
+{
+    line-height: 40px;
+}
+article
+{
+    font-style: italic;
+    text-align: center;
+}
+#footer
+{
+    text-align: center;
+    padding-bottom: 20px;
+}

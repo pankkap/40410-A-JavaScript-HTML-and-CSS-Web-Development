@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Tags</title>
+    <style>
+      label {
+        font-weight: bold;
+      }
+      main {
+        width: 500px;
+        margin: auto;
+        background-color: aqua;
+      }
+      main h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>Registration Form</h2>
+      <form action="../Mod-1/FirstApp.html" method="post">
+        <pre>
+        <label for="username">Enter Name:</label>
+        <input type="text" id="username" name="username"/>
+        
+        <label for="password">Enter Password:</label>
+        <input type="password"  id="password" name="password"/>
+
+        <label for="">Gender:</label>    
+         <input type="radio" name="gender" value="male"> Male  
+         <input type="radio" name="gender" value="female"> FeMale  
+
+        <label for="">Hobbies</label>
+        <input type="checkbox" name="hobbies" checked value="Reading">Reading
+        <input type="checkbox" name="hobbies" value="Writing">Writing
+        <input type="checkbox" name="hobbies" checked value="music">Music
+        <input type="checkbox" name="hobbies" value="coding">Coding
+        <input type="checkbox" name="hobbies" value="gardening">gardening
+
+        <textarea name="Address" id="" cols="30" rows="10"></textarea>    
+        
+        <label for="">DOB</label>
+        <input type="date" name="date">
+        <label for="">DOT</label>
+        <input type="time" name="time">
+
+        <input type="submit" value="Register" >    <input type="reset" value="Reset" >    
+        </pre>
+      </form>
+    </main>
+
+    <!-- <pre>
+        for(let i=0;i<=10;i++)
+        {
+            print(i,"\n")
+        }
+    </pre> -->
+  </body>
+</html>
